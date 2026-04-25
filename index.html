@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profi-Link</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--blue:#1a2b4c;
+--orange:#ff5c35;
+--white:#ffffff;
+--light:#e0f0ff;
+--text:#1e1e1e;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter;}
+body{color:var(--text);}
+
+.container{width:90%;max-width:1100px;margin:auto;}
+section{padding:80px 0;}
+
+h1{font-size:52px;color:white;}
+h2{text-align:center;font-size:32px;margin-bottom:40px;}
+p{line-height:1.6;color:#555;}
+
+.btn{
+padding:14px 24px;
+border-radius:14px;
+font-weight:600;
+text-decoration:none;
+display:inline-block;
+transition:.3s;
+}
+
+.btn-orange{
+background:var(--orange);
+color:white;
+}
+
+.btn-orange:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(255,92,53,0.4);
+}
+
+.btn-outline{
+border:2px solid white;
+color:white;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:var(--blue);
+padding:15px 0;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{color:white;font-weight:700;}
+
+.hero{
+background:var(--blue);
+text-align:center;
+padding-top:140px;
+padding-bottom:180px;
+position:relative;
+}
+
+.hero p{
+color:#ddd;
+margin:20px auto;
+max-width:650px;
+}
+
+.hero-buttons{
+margin-top:20px;
+}
+
+.hero-bottom{
+margin-top:25px;
+color:#ccc;
+font-size:14px;
+}
+
+/* ДУГА (оставили, просто ниже) */
+.hero::after{
+content:"";
+position:absolute;
+bottom:-120px;
+left:0;
+width:100%;
+height:220px;
+background:var(--orange);
+border-radius:50% 50% 0 0;
+}
+
+/* РОЛИ */
+.roles{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+margin-top:40px;
+}
+
+.role{
+padding:30px;
+border-radius:20px;
+background:white;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.note{
+text-align:center;
+margin-top:20px;
+color:#666;
+}
+
+/* КАК РАБОТАЕТ */
+.steps{
+display:grid;
+grid-template-columns:1fr;
+gap:25px;
+max-width:800px;
+margin:auto;
+}
+
+.step{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* ABOUT */
+.about{
+background:var(--light);
+padding:40px;
+border-radius:20px;
+}
+
+/* FOOTER */
+footer{
+background:var(--blue);
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+.roles{grid-template-columns:1fr;}
+h1{font-size:34px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div class="logo">Profi-Link</div>
+
+<div>
+<a href="tasks.html" class="btn btn-orange">Я ученик</a>
+<a href="https://t.me/profi_linkBot" class="btn btn-outline">Я даю задание</a>
+</div>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+
+<h1>Profi-Link</h1>
+
+<p>
+Платформа, где можно попробовать разные профессии через реальные задания.  
+Ты выбираешь задачу, отправляешь решение и получаешь ответ от человека, который работает в этой сфере.
+</p>
+
+<div class="hero-buttons">
+<a href="tasks.html" class="btn btn-orange">Смотреть задания</a>
+<a href="#how" class="btn btn-outline">Как это работает</a>
+</div>
+
+<div class="hero-bottom">
+Без регистрации • Обратная связь • Реальные кейсы
+</div>
+
+</div>
+</section>
+
+<!-- РОЛИ -->
+<section>
+<div class="container">
+<h2>Кто ты?</h2>
+
+<div class="roles">
+
+<div class="role">
+<h3>🎒 Я ученик</h3>
+<p>
+Выбираешь задание на сайте → отправляешь решение через ученический бот. Эксперт увидит твою работу. Если она отмечена — публикуется на сайте с отзывом и попадает в твоё портфолио.
+</p>
+<br>
+<a href="tasks.html" class="btn btn-orange">Перейти к заданиям</a>
+</div>
+
+<div class="role">
+<h3>🧠 Я даю задание</h3>
+<p>
+Отправляете задание через бота для экспертов → оно появляется на сайте. Решения учеников мы передаём вам. Вы отмечаете лучшие и даёте отзыв — работа и комментарий публикуются на сайт.</p>
+<br>
+<a href="https://t.me/profi_linkBot" class="btn btn-orange">Отправить задание</a>
+</div>
+
+</div>
+
+<div class="note">
+Выберите свою роль. Ученик выполняет задания, эксперт их создаёт. Смешивать роли нельзя.
+</div>
+
+</div>
+</section>
+
+<!-- КАК РАБОТАЕТ -->
+<section id="how">
+<div class="container">
+
+<h2>Как это работает</h2>
+
+<div class="steps">
+
+<div class="step">
+<b>1. Ты выбираешь задание</b>
+<p>
+На странице заданий есть список задач.  
+Каждую добавляет администратор вручную после проверки.  
+Ты просто смотришь, что тебе интересно, и выбираешь одно.
+</p>
+</div>
+
+<div class="step">
+<b>2. Переходишь в Telegram</b>
+<p>
+Под заданием есть кнопка.  
+Она открывает Telegram-бота и сразу передаёт ему, какое задание ты выбрал.  
+Ты отправляешь туда текст, файл или картинку.
+</p>
+</div>
+
+<div class="step">
+<b>3. Ответ попадает к администратору</b>
+<p>
+Бот сохраняет твою работу.  
+Администратор видит все ответы и может передать их эксперту.
+</p>
+</div>
+
+<div class="step">
+<b>4. Эксперт даёт обратную связь</b>
+<p>
+Человек, который дал задание, смотрит ответы и пишет комментарии:  
+что получилось хорошо и что можно улучшить.
+</p>
+</div>
+
+<div class="step">
+<b>5. Лучшие ответы появляются на сайте</b>
+<p>
+Администратор добавляет лучшие работы на страницу задания.  
+Так другие могут посмотреть примеры и понять, как делать лучше.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section>
+<div class="container">
+<div class="about">
+
+<h2>О проекте</h2>
+
+<p>
+Profi Link создан, чтобы школьники не просто читали о профессиях, а пробовали их руками. Здесь нет обязательной регистрации и лишних формальностей — только практические задания от реальных специалистов. Проект некоммерческий и существует для того, чтобы помочь подросткам осознанно выбрать будущее.
+
+
+</p>
+
+
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 Profi-Link — мост, который строишь ты
+</footer>
+
+</body>
+</html>
